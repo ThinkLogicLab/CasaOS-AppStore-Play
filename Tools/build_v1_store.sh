@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Build the CasaOS v1 (zip) app store packages, one per architecture.
+# Build the CasaOS v1 (legacy zip) app store packages, one per architecture.
+#
+# This script owns v1 only. The v2 app store index (dist/index.json) is built
+# by IceWhaleTech/build-appstore-action and is architecture agnostic, so it is
+# not produced here.
 #
 # Pure shell, no PyYAML. The old implementation failed because it filtered with
 #     grep -rlPz 'x-casaos:\s*\n\s*architectures:[\n\s\w-#]*- arm\s*\n'
